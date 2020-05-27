@@ -1,0 +1,11 @@
+
+.slika{
+    
+}
+
+/*Mobile phones*/
+@media only screen and (max-width: 768px){
+    [class*="col-"]{
+        width:100%;
+    }
+}
