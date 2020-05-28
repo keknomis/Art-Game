@@ -1,11 +1,40 @@
-
 .slika{
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+.content {
+    max-width: 90%;
+    display: block;
+    height: auto;
+    padding-top: 5%;
+
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
     
 }
+ .gumb{
+   display: block;
+   justify-content: center;
+   align-items: center;
+}
 
-/*Mobile phones*/
-@media only screen and (max-width: 768px){
-    [class*="col-"]{
-        width:100%;
+
+.text{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+@media screen and (min-width:601px){
+    .text{
+        font-size: 45px;
     }
 }
+@media screen and (max-width:600px){
+    .text{
+        font-size: 20px;
+    }
+}
+
