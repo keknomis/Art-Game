@@ -22,7 +22,7 @@
         a {
             color: black;
             font-size: 18px;
-            font-weight:normal;
+            font-weight: normal;
         }
 
         a:link {
@@ -68,7 +68,7 @@
             padding: 5%;
             /* text-align: center; */
             /* font-weight:normal;
-            font-size: 18px; */
+                font-size: 18px; */
             backface-visibility: hidden;
         }
 
@@ -95,13 +95,16 @@
             text-align: center;
         }
 
-        h4 {
-
+        .heading {
             color: #c7b033;
         }
 
         .question {
-            padding-top: 15px;
+            padding-top: 25%;
+        }
+
+        .hidden-btn {
+            margin-top: 5%;
         }
     </style>
 
@@ -113,79 +116,45 @@
             <div class="scene justify-content-md-center">
                 <div class="card">
                     <div class="card__face card__face--front">
-                        <h4 class="text-center">Na prejšnji sliki si lahko videl/a umetniško postavitev Prt.
-                            <br>
-                            <small>To je delo kiparke Metke Kavčič</small>
-                        </h4>
-                        <img src="pictures/metka-thumb.jpg" class="rounded mx-auto d-block img-fluid"
-                            alt="Slika kiparke">
-
-                        <div class="question">
-                            <p class="big-text">Kateri material je umetnica uporabila za Prt?</p>
-                            <br>
-                            <p>Obrni stran in si pozorno preberi in oglej izvleček
-                                z uradne spletne strani umetnice</p>
+                        <h4 class="text-center heading">Kako je naslov razstavi, katere del je bila umetniška postavitev
+                            Prt? </h4>
+                        <br>
+                        <br>
+                        <p class="big-text">Izberi pravilen odgovor: </p>
+                        <div class="list-group question-box"  id="hidden-list">
+                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(0); ">Festival 1</a>
+                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(1)">Festival 2</a>
+                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(2)">Festival idrijske čipke</a>
+                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(3)">Festival 3</a>
+                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(4)">Festival 4</a>
+                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(5)">Festival 5</a>
                         </div>
 
-                        <p id="hidden-text" style="display: none;"><span class="big-text">Odgovor si zapomni. </span>
-                            <br>
-                            <br>
-                            Kateri material je še razviden? Klikni na gumb in si ponovno poglej celotno umetniško
-                            postavitev.
-                        </p>
-                        <div id="img"></div>
                         <button id="hidden-btn" type="button" type="button"
-                            class="btn btn btn-block btn-secondary text-center" style="display: none;"><a
-                                href="3korak.html">Oglej si sliko</a></button>
+                            class="align-self-end btn btn btn-block btn-primary text-center "
+                            style="display: none;"><a href="korak6.html">Nadaljuj</a></button>
+
                     </div>
-                    <div class="card__face card__face--back">
-                        <p>Metka Kavčič je rojena v Mariboru leta 1960. Po študiju likovne vzgoje na Pedagoški fakulteti
-                            v
-                            Mariboru se je vpisala na Akademijo za likovno
-                            Umetnost v Ljubljani, na oddelek za kiparstvo, kjer je leta 1987 diplomirala pri profesorju
-                            Slavku Tihcu.<br>
-                            Specialko za konzervartorstvo in restavratorstvo je leta 1990 zaključila pri profesorju
-                            Francu
-                            Kokalju na isti ustanovi.
-                            <br>
-                            Leta 1998 se je strokovno izpopolnjevala na Ecole Nationale Superieure des Beaix-Arts v
-                            Parizu.
-                            <br>
-                            Od leta 2000 živi in dela kot samostojna ustvarjalka na področju kulture v Mariboru.
-                        </p>
-                        <img src="metka.jpg" class="center">
-                    </div>
+
 
                 </div>
             </div>
         </div>
     </div>
     <script>
-        //Za obračanje slik, in prikazovanje skritih elementov
-        var count = 0;
-        var card = document.querySelector('.card');
-        card.addEventListener('click', function () {
-            card.classList.toggle('is-flipped');
-            count++;
-            //prikažemo tekst
-            if (count >= 0) {
-                setTimeout(function () {
-                    let text = document.getElementById("hidden-text");
-                    text.style.display = "block";
-                    let btn = document.getElementById("hidden-btn");
+  
+        function verify(elementnumber) {
+            //recimo da bomo pravo prestavo opremili z 1
+            if (elementnumber == 2) {
+                let ele = document.getElementsByClassName('list-group-item')[elementnumber];
+                ele.classList.add('list-group-item-success');
+
+                let btn = document.getElementById("hidden-btn");
                     btn.style.display = "block";
-                }, 1500)
             }
-            //prikažemo sliko -- to gre ven
-            //     if(count==1){
-            //         setTimeout(function (){
-            //         var img = document.createElement('img')
-            //         img.src = 'nesekirat.png';
-            //         img.id="table";
-            //         document.getElementById('img').append(img)
-            //         },1500)          
-            //     }
-        });
+        }
+
+    </script>
     </script>
 
 

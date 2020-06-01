@@ -7,7 +7,7 @@
     max-width: 90%;
     display: block;
     height: auto;
-    padding-top: 5%;
+    padding-top: 0%;
 
     margin-left: 5%;
     margin-top: 5%;
@@ -25,6 +25,19 @@
     margin-top:5%;
     padding: 2%;
 }
+a {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+a:hover{
+    color: ghostwhite;
+}
+a:link{
+    text-decoration: none;
+    color: black;
+}
+
 
 
 .text{
@@ -36,10 +49,16 @@
     .text{
         font-size: 45px;
     }
+    a{
+        font-size:30px;
+    }
 }
 @media screen and (max-width:600px){
     .text{
         font-size: 20px;
+    }
+    a{
+        font-size:18px;
     }
 }
 

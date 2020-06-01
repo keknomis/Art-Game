@@ -22,7 +22,7 @@
         a {
             color: black;
             font-size: 18px;
-            font-weight:normal;
+            font-weight: normal;
         }
 
         a:link {
@@ -68,7 +68,7 @@
             padding: 5%;
             /* text-align: center; */
             /* font-weight:normal;
-            font-size: 18px; */
+                font-size: 18px; */
             backface-visibility: hidden;
         }
 
@@ -95,13 +95,16 @@
             text-align: center;
         }
 
-        h4 {
-
+        .heading {
             color: #c7b033;
         }
 
         .question {
-            padding-top: 15px;
+            padding-top: 25%;
+        }
+
+        .hidden-btn {
+            margin-top: 5%;
         }
     </style>
 
@@ -113,47 +116,44 @@
             <div class="scene justify-content-md-center">
                 <div class="card">
                     <div class="card__face card__face--front">
-                        <h4 class="text-center">Na prejšnji sliki si lahko videl/a umetniško postavitev Prt.
-                            <br>
-                            <small>To je delo kiparke Metke Kavčič</small>
-                        </h4>
-                        <img src="pictures/metka-thumb.jpg" class="rounded mx-auto d-block img-fluid"
-                            alt="Slika kiparke">
+                        <h4 class="text-center heading">Kako je naslov razstavi, katere del je bila umetniška postavitev
+                            Prt? </h4>
+                        <br>
+                        <br>
+                        <p class="big-text">Odgovor boš našel v izvlečku članka UGM, ki je na drugi strani.</p>
+                        <br>
+                        <p id="instructions" class="big-text">Z klikom obrni stran in poišči odgovor</p>
 
-                        <div class="question">
-                            <p class="big-text">Kateri material je umetnica uporabila za Prt?</p>
-                            <br>
-                            <p>Obrni stran in si pozorno preberi in oglej izvleček
-                                z uradne spletne strani umetnice</p>
-                        </div>
 
-                        <p id="hidden-text" style="display: none;"><span class="big-text">Odgovor si zapomni. </span>
-                            <br>
-                            <br>
-                            Kateri material je še razviden? Klikni na gumb in si ponovno poglej celotno umetniško
-                            postavitev.
-                        </p>
-                        <div id="img"></div>
-                        <button id="hidden-btn" type="button" type="button"
-                            class="btn btn btn-block btn-secondary text-center" style="display: none;"><a
-                                href="3korak.html">Oglej si sliko</a></button>
+                        <button id="hidden-btn" type="button" type="button" onclick="temp()"
+                            class="align-self-end btn btn btn-block btn-primary text-center "
+                            style="display: none;"><a href="5korak.html">Nadaljuj</a></button>
+
                     </div>
+
+
                     <div class="card__face card__face--back">
-                        <p>Metka Kavčič je rojena v Mariboru leta 1960. Po študiju likovne vzgoje na Pedagoški fakulteti
-                            v
-                            Mariboru se je vpisala na Akademijo za likovno
-                            Umetnost v Ljubljani, na oddelek za kiparstvo, kjer je leta 1987 diplomirala pri profesorju
-                            Slavku Tihcu.<br>
-                            Specialko za konzervartorstvo in restavratorstvo je leta 1990 zaključila pri profesorju
-                            Francu
-                            Kokalju na isti ustanovi.
+                        <h4 style="font-weight: bold;"><span style="color: red;">26.10.2006 – 26.11.2006</span> METKA
+                            KAVČIČ, ZAPREDENE SLEDI</h4>
+                        <h5>Umetnostna galerija Maribor, Strossmayerjeva 6</h5>
+                        <p>Metka Kavčič, akademska kiparka, diplomantka ljubljanske ALU, se v spodnjih galerijskih
+                            prostorih UGM predstavlja z ambientalno zasnovanim projektom Zapredene sledi. Spodbudila ga
+                            je bogata idrijska kulturno-zgodovinska zakladnica, s katero se je srečala v lanskem letu,
+                            ko je bila povabljena na Festival idrijske čipke, ki vrača sloviti lokalni posebnosti
+                            nekdanjo veljavo. Avtorica je razstavo oblikovala s povezovanjem tradicionalnih oblikovnih
+                            vrednot in sodobnih kiparskih prijemov. Jedro likovnega projekta predstavljajo čipkasti
+                            kovinski elementi, ki simbolizirajo ženske psihofizične lastnosti in masivne lesene
+                            konstrukcije, ki asociirajo na moško značajsko ter telesno specifiko. Miselno in čustveno
+                            potovanje v preteklost z obujanjem tedanjih vrednot je Kavčičeva izrabila za sočasno
+                            artikulacijo svojega kritičnega odnosa do aktualne problematike sedanjega časa.
                             <br>
-                            Leta 1998 se je strokovno izpopolnjevala na Ecole Nationale Superieure des Beaix-Arts v
-                            Parizu.
+                            Ambientalni projekt Zapredene sledi, ki je rezultat sodelovanja med Umetnostno galerijo
+                            Maribor in Mestnim muzejem Idrija, bo prihodnje poletje predstavljen v novi idrijski
+                            galeriji Barbara pod Mestnim trgom.
                             <br>
-                            Od leta 2000 živi in dela kot samostojna ustvarjalka na področju kulture v Mariboru.
+                            Razstavo je odprla Magdalena Tovornik, višja svetnica za politične zadeve Urada predsednika
+                            republike Slovenije.
                         </p>
-                        <img src="metka.jpg" class="center">
                     </div>
 
                 </div>
@@ -163,29 +163,31 @@
     <script>
         //Za obračanje slik, in prikazovanje skritih elementov
         var count = 0;
+
         var card = document.querySelector('.card');
         card.addEventListener('click', function () {
             card.classList.toggle('is-flipped');
+
             count++;
             //prikažemo tekst
             if (count >= 0) {
                 setTimeout(function () {
-                    let text = document.getElementById("hidden-text");
-                    text.style.display = "block";
+                  
+                    let text =document.getElementById("instructions");
+                    text.innerHTML="Klikni na gumb nadaljuj in odgovori na vprašanje";
                     let btn = document.getElementById("hidden-btn");
                     btn.style.display = "block";
+
                 }, 1500)
             }
-            //prikažemo sliko -- to gre ven
-            //     if(count==1){
-            //         setTimeout(function (){
-            //         var img = document.createElement('img')
-            //         img.src = 'nesekirat.png';
-            //         img.id="table";
-            //         document.getElementById('img').append(img)
-            //         },1500)          
-            //     }
         });
+
+        function temp() {
+            card.classList.remove('is-flipped');
+        }
+     
+
+    </script>
     </script>
 
 
