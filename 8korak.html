@@ -97,20 +97,12 @@
 
         .heading {
             color: #c7b033;
+            margin-bottom: 5%;
         }
 
-        .question {
-            padding-top: 25%;
-        }
-
-        #hidden-btn {
+        .odg {
             margin-top: 5%;
-        }
-
-        .question-mark {
-            color: #c7b033;
-            font-size: 100px;
-            display: block;
+            text-align: center;
         }
     </style>
 
@@ -118,26 +110,76 @@
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="scene justify-content-md-center">
-                <div class="card">
-                    <div class="card__face card__face--front">
-                        <h4 class="text-center heading">Metka Kavčič se s to razstavo ukvarja tudi z ženskim in moškim
-                            principom. Poglejmo, kaj to pomeni </h4>
+        <div class="scene justify-content-md-center">
+            <div class="card">
+                <div class="card__face card__face--front">
+                    <h4 class="text-center heading">Metka Kavčič se s to razstavo ukvarja tudi z ženskim in moškim
+                        principom. Poglejmo, kaj to pomeni </h4>
 
-                            <button class="btn btn-info" 
-                   
-                        
-
-
-                    </div>
-
-
-
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                              <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    1. Predstavitev vlog
+                                  </button>
+                                </h2>
+                              </div>
+                          
+                              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p> Tradicionalna ženska vloga, ki se navezuje na to umetniško postavitev, je nekoč
+                                        zajemala tudi klekljanje (izdelovanje čipk). Tradicionalna moška vloga, gledana
+                                        skozi prizmo dela Prt,
+                                        pa je med drugim zajemala delo z varilnimi stroji in kovino.
+                                    </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <div class="card-header" id="headingTwo">
+                                <h2 class="mb-0">
+                                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    2. Ogled fotografije
+                                  </button>
+                                </h2>
+                              </div>
+                              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>S čim umetnica pri tej umetniški postavitvi preizprašuje tradicionalne moške in
+                                        ženske vloge? Ustvari enačbo s spodnjimi elementi, ki bo odražala odgovor na to
+                                        vprašanje.
+                                        Nekaj pojmov bo na koncu odveč.
+                                    </p>
+                                    <img src="pictures/metka-thumb.jpg">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <div class="card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    3. Navodilo za nalogo
+                                  </button>
+                                </h2>
+                              </div>
+                              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>S čim umetnica pri tej umetniški postavitvi preizprašuje tradicionalne moške in
+                                        ženske vloge? Ustvari enačbo s spodnjimi elementi, ki bo odražala odgovor na to
+                                        vprašanje.
+                                        Nekaj pojmov bo na koncu odveč.
+                                    </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>               
+                    <button type="button" class="odg btn btn-secondary btn-block"><a href="9korak.html">Odgovori</a></button>
                 </div>
             </div>
         </div>
     </div>
+
     <script>
 
 
@@ -157,16 +199,50 @@
 
 
 
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+crossorigin="anonymous"></script>
 </body>
 
 </html>
+
+  <!-- 
+                    <div class="row">
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                <div class="card card-body" id="multiCollapseExample1">
+                                    <p> Tradicionalna ženska vloga, ki se navezuje na to umetniško postavitev, je nekoč
+                                        zajemala tudi klekljanje (izdelovanje čipk). Tradicionalna moška vloga, gledana
+                                        skozi prizmo dela Prt,
+                                        pa je med drugim zajemala delo z varilnimi stroji in kovino.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                <div class="card card-body" id="multiCollapseExample2">
+                                    <p>Sedaj pa si osveži spomin in ponovno poglej spodnjo fotografijo. Zraven razmisli,
+                                        kaj
+                                        je umetnica storila glede tradicionalne ženske in moške vloge.</p>
+                                        <img src="pictures/metka-thumb.jpg">
+                                </div>
+                            </div>
+                            <div class="collapse multi-collapse" id="multiCollapseExample3">
+                                <div class="card card-body" id="multiCollapseExample3">
+                                    <p>S čim umetnica pri tej umetniški postavitvi preizprašuje tradicionalne moške in
+                                        ženske vloge? Ustvari enačbo s spodnjimi elementi, ki bo odražala odgovor na to
+                                        vprašanje.
+                                        Nekaj pojmov bo na koncu odveč.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                    </div>
+                     -->
