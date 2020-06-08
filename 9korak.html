@@ -1,226 +1,92 @@
 <!DOCTYPE html>
-<html class="no-js">
-
+<html>
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>--- TODO ---</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <style>
-        img {
-            border-radius: 8px;
-            border: 2px solid darkgray;
-        }
-
-        /*Odstranimo underline na linku*/
-        a {
-            color: black;
-            font-size: 18px;
-            font-weight: normal;
-        }
-
-        a:link {
-            text-decoration: none;
-            color: black;
-        }
-
-        body {
-            font-family: sans-serif;
-        }
-
-        .scene {
-            width: 600px;
-            height: 750px;
-            border: 1px solid #CCC;
-            max-width: 90%;
-            margin: auto;
-            margin-top: 15%;
-            margin-bottom: 5%;
-            display: block;
-        }
-
-        .card {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            cursor: pointer;
-            transform-style: preserve-3d;
-            transform-origin: center right;
-            transition: transform 1s;
-        }
-
-        .card.is-flipped {
-            transform: translateX(-100%) rotateY(-180deg);
-        }
-
-        .card__face {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            /* line-height: 260px; */
-            color: black;
-            padding: 5%;
-            /* text-align: center; */
-            /* font-weight:normal;
-                font-size: 18px; */
-            backface-visibility: hidden;
-        }
-
-        .card__face--front {
-            background: ghostwhite;
-        }
-
-        .card__face--back {
-            background: ghostwhite;
-            transform: rotateY(180deg);
-            color: black;
-        }
-
-        .center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
-        }
-
-        .big-text {
-            font-size: larger;
-            font-weight: 300;
-            text-align: center;
-        }
-
-        .heading {
-            color: #c7b033;
-            margin-bottom: 5%;
-        }
-
-        .odg {
-            margin-top: 5%;
-            text-align: center;
-        }
-
-        /*drag and drop */
-        .droptarget {
-            float: left;
-            width: 100px;
-            height: 35px;
-            margin: 15px;
-            padding: 10px;
-            border: 1px solid #aaaaaa;
-        }
-    </style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="scene justify-content-md-center">
-            <div class="card">
-                <div class="card__face card__face--front">
-                    <h4 class="text-center heading">Metka Kavčič se s to razstavo ukvarja tudi z ženskim in moškim
-                        principom. Poglejmo, kaj to pomeni </h4>
+    <div class="container ">
+        <div class="row ">
+            <div class="content mx-auto card justify-content-md-center">
+                <div class="card">
+                    <div class="card-header">
+                       <h2> Spodaj izmed vseh pojmov izberi tista 2, ki skupaj tvorita pravilno kombinacijo materialov
+                        uporabljenih pri delu Prt.</h2>
+                    </div>
                     <div class="card-body">
-                        <p>Drag the p element back and forth between the two rectangles:</p>
+                        <div class="row">
+                            <div class="col d-flex justify-content-center">
 
-                        <div class="droptarget">
-                            <p draggable="true" id="dragtarget">Drag me!</p>
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action"
+                                        onclick="verify(0)">ravnovesje</a>
+                                    <a href="#" class="list-group-item list-group-item-action"
+                                        onclick="verify(1)">čipke</a>
+                                    <a href="#" class="list-group-item list-group-item-action"
+                                        onclick="verify(2)">tradicija</a>
+                                </div>
+
+                            </div>
+                            <div class="col d-flex justify-content-center">
+
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action"
+                                        onclick="verify(3)">stol</a>
+                                    <a href="#" class="list-group-item list-group-item-action"
+                                        onclick="verify(4)">omizje</a>
+                                    <a href="#" class="list-group-item list-group-item-action"
+                                        onclick="verify(5)">lebdenje</a>
+                                </div>
+                            </div>
+
+
+                            <button type="button" class="gumb odmik btn btn-block btn-secondary"
+                             style="display:none;" id="hidden-btn"><a href="11korak.html">Nadaljuj</a></button>
                         </div>
 
-                        <div class="droptarget"></div>
-
-                        <p style="clear:both;"><strong>Note:</strong> drag events are not supported in Internet Explorer
-                            8 and earlier versions or Safari 5.1 and earlier versions.</p>
-
-                        <p id="demo"></p>
                     </div>
-
-
                 </div>
             </div>
         </div>
-    </div>
-
-    <script>
-     
-
-        document.addEventListener("dragstart", function (event) {
-            // The dataTransfer.setData() method sets the data type and the value of the dragged data
-            event.dataTransfer.setData("Text", event.target.id);
-
-            // Output some text when starting to drag the p element
-            document.getElementById("demo").innerHTML = "Started to drag the p element.";
-
-            // Change the opacity of the draggable element
-            event.target.style.opacity = "0.4";
-        });
-
-        // While dragging the p element, change the color of the output text
-        document.addEventListener("drag", function (event) {
-            document.getElementById("demo").style.color = "red";
-        });
-
-        // Output some text when finished dragging the p element and reset the opacity
-        document.addEventListener("dragend", function (event) {
-            document.getElementById("demo").innerHTML = "Finished dragging the p element.";
-            event.target.style.opacity = "1";
-        });
-
-        /* Events fired on the drop target */
-
-        // When the draggable p element enters the droptarget, change the DIVS's border style
-        document.addEventListener("dragenter", function (event) {
-            if (event.target.className == "droptarget") {
-                event.target.style.border = "3px dotted red";
+        <script>
+            //je prav stud ko nista obe poklikane ampak 1 2x
+            //pobarva pravilne odgovore 
+            let count = 0;
+            function verify(elementnumber) {
+                if (elementnumber == 1 || elementnumber == 5) {
+                    let ele=document.getElementsByClassName('list-group-item')[elementnumber];
+                    ele.classList.add('list-group-item-success');
+                    count++;
+                }
+                //Ko najde oba odg. pokazemo gumb za dalje
+                if(count==2){
+                    let btn=document.getElementById("hidden-btn");
+                    btn.style.display="block";
+                }
             }
-        });
-
-        // By default, data/elements cannot be dropped in other elements. To allow a drop, we must prevent the default handling of the element
-        document.addEventListener("dragover", function (event) {
-            event.preventDefault();
-        });
-
-        // When the draggable p element leaves the droptarget, reset the DIVS's border style
-        document.addEventListener("dragleave", function (event) {
-            if (event.target.className == "droptarget") {
-                event.target.style.border = "";
-            }
-        });
-
-        /* On drop - Prevent the browser default handling of the data (default is open as link on drop)
-           Reset the color of the output text and DIV's border color
-           Get the dragged data with the dataTransfer.getData() method
-           The dragged data is the id of the dragged element ("drag1")
-           Append the dragged element into the drop element
-        */
-        document.addEventListener("drop", function (event) {
-            event.preventDefault();
-            if (event.target.className == "droptarget") {
-                document.getElementById("demo").style.color = "";
-                event.target.style.border = "";
-                var data = event.dataTransfer.getData("Text");
-                event.target.appendChild(document.getElementById(data));
-            }
-        });
-    </script>
+        </script>
 
 
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+
+        <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
