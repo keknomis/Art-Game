@@ -121,18 +121,24 @@
                         <br>
                         <br>
                         <p class="big-text">Izberi pravilen odgovor: </p>
-                        <div class="list-group question-box"  id="hidden-list">
-                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(0); ">Festival 1</a>
-                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(1)">Festival 2</a>
-                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(2)">Festival idrijske čipke</a>
-                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(3)">Festival 3</a>
-                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(4)">Festival 4</a>
-                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(5)">Festival 5</a>
+                        <div class="list-group question-box" id="hidden-list">
+                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(0); ">Festival
+                                1</a>
+                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(1)">Festival
+                                2</a>
+                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(2)">Festival
+                                idrijske čipke</a>
+                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(3)">Festival
+                                3</a>
+                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(4)">Festival
+                                4</a>
+                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(5)">Festival
+                                5</a>
                         </div>
 
                         <button id="hidden-btn" type="button" type="button"
-                            class="align-self-end btn btn btn-block btn-primary text-center "
-                            style="display: none;"><a href="korak6.html">Nadaljuj</a></button>
+                            class="align-self-end btn btn btn-block btn-primary text-center " style="display: none;"><a
+                                href="korak6.html">Nadaljuj</a></button>
 
                     </div>
 
@@ -142,7 +148,7 @@
         </div>
     </div>
     <script>
-  
+
         function verify(elementnumber) {
             //recimo da bomo pravo prestavo opremili z 1
             if (elementnumber == 2) {
@@ -150,7 +156,7 @@
                 ele.classList.add('list-group-item-success');
 
                 let btn = document.getElementById("hidden-btn");
-                    btn.style.display = "block";
+                btn.style.display = "block";
             }
         }
 

@@ -36,7 +36,7 @@
 
         .scene {
             width: 600px;
-            height: 850px;
+            height: 750px;
             border: 1px solid #CCC;
             max-width: 90%;
             margin: auto;
@@ -102,11 +102,10 @@
         .question {
             padding-top: 25%;
         }
-        .btn-odg{
-            margin-top: 5%;
-            margin-bottom: 5%;
-        }
 
+        #hidden-btn {
+            margin-top: 5%;
+        }
 
         .question-mark {
             color: #c7b033;
@@ -114,22 +113,7 @@
             display: block;
         }
 
-        .hint {
-            text-align: center;
-            margin-top: 5%;
-            margin-bottom: 5%;
-            font-size: 15px;
-        }
 
-        .textBtn {
-            margin-top: 5%;
-            margin-bottom: 5%;
-        }
-
-        .imgBtn {
-            margin-top: 5%;
-            margin-bottom: 5%;
-        }
     </style>
 
 </head>
@@ -142,51 +126,19 @@
                     <div class="card__face card__face--front">
                         <h2 class="text-center heading">Kaj je osrednji motiv dela
                             Prt? </h2>
-                        <div class="hint justify-content-md-center">
-                            <span class="hint">Klikni na vprašaj in si pomagaj z viroma.
-                                po ogledu virov klikni na sivi gumb in pojdi odgovori na vprašnje
-                            </span>
-
-                            <i class="fa fa-question-circle question-mark" data-toggle="collapse"
-                                href="#multiCollapseExample1" role="button" aria-expanded="false"
-                                aria-controls="multiCollapseExample1" style="display: block;"></i>
-
-                            <div class="btn-odg">
-                                <button id="hidden-btn" type="button" type="button"
-                                    class="btn btn btn-block btn-info text-center">
-                                    <a href="7korak.html">Odgovori</a></button>
-                            </div>
-
-
-                            <div class="collapse multi-collapse" id="multiCollapseExample1">
-                                <button type="button" class="btn btn-outline-secondary btn-block" onclick="imgBtn()">
-                                    Prt</button>
-                                <button type="button" class="btn btn-outline-secondary btn-block" onclick="textBtn()">
-                                    Osnutek</button>
-                            </div>
-
-                            <div class="textBtn">
-                                <p id="hidden-text" style="display: none;">
-                                    Spodbudila ga
-                                    je bogata idrijska kulturno-zgodovinska zakladnica, s katero se je srečala v lanskem
-                                    letu,
-                                    ko je bila povabljena na Festival idrijske čipke, ki vrača sloviti lokalni
-                                    posebnosti
-                                    nekdanjo veljavo. Avtorica je razstavo oblikovala s povezovanjem tradicionalnih
-                                    oblikovnih
-                                    vrednot in sodobnih kiparskih prijemov. Jedro likovnega projekta predstavljajo
-                                    čipkasti
-                                    kovinski elementi, ki simbolizirajo ženske psihofizične lastnosti in masivne lesene
-                                    konstrukcije, ki asociirajo na moško značajsko ter telesno specifiko.
-                                </p>
-                            </div>
-                            <div class="imgBtn">
-                                <img class="img-fluid" id="hidden-img" src="pictures/1.png" style="display:none">
-                            </div>
+                        <p class="big-text">Izberi pravilen odgovor: </p>
+                        <div class="list-group question-box" id="hidden-list">
+                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(0); ">Čipka
+                                </a>
+                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(1)">Tekstil
+                                </a>
+                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(2)">Miza
+                                </a>
                         </div>
 
-
-
+                        <button id="hidden-btn" type="button" type="button" style="display: none;"
+                        class="btn btn btn-block btn-outline-primary text-center">
+                        <a href="8korak.html">Nadaljuj</a></button>
 
                     </div>
 
@@ -198,29 +150,10 @@
     </div>
     <script>
 
-        function textBtn() {
-            let card = document.getElementsByClassName("card");
-            let text = document.getElementById("hidden-text");
-            if (text.style.display === "none") {
-                text.style.display = "block";
-            } else {
-                text.style.display = "none";
-            }
-        }
-
-        function imgBtn() {
-            let img = document.getElementById('hidden-img');
-            if (img.style.display === "none") {
-                img.style.display = "block";
-            } else {
-                img.style.display = "none";
-            }
-
-        }
-
+      
         function verify(elementnumber) {
             //recimo da bomo pravo prestavo opremili z 1
-            if (elementnumber == 2) {
+            if (elementnumber == 0) {
                 let ele = document.getElementsByClassName('list-group-item')[elementnumber];
                 ele.classList.add('list-group-item-success');
 
@@ -230,7 +163,7 @@
         }
 
     </script>
-    </script>
+
 
 
 
