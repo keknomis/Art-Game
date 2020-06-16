@@ -122,18 +122,15 @@
                         <br>
                         <p class="big-text">Izberi pravilen odgovor: </p>
                         <div class="list-group question-box" id="hidden-list">
-                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(0); ">Festival
-                                1</a>
-                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(1)">Festival
-                                2</a>
-                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(2)">Festival
-                                idrijske čipke</a>
-                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(3)">Festival
-                                3</a>
-                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(4)">Festival
-                                4</a>
-                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(5)">Festival
-                                5</a>
+                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(0)">Festival idrijske čipke
+                                </a>
+                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(1)">Ambientalni projekt
+                                </a>
+                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(2)">Zapredene sledi
+                                </a>
+                            <a href="#" class="list-group-item list-group-item-action" onclick="verify(3)">Idrijska kulturno zgodovinska zakladnica
+                                </a>
+                
                         </div>
 
                         <button id="hidden-btn" type="button" type="button"
@@ -151,7 +148,7 @@
 
         function verify(elementnumber) {
             //recimo da bomo pravo prestavo opremili z 1
-            if (elementnumber == 2) {
+            if (elementnumber == 0) {
                 let ele = document.getElementsByClassName('list-group-item')[elementnumber];
                 ele.classList.add('list-group-item-success');
 

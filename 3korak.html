@@ -24,11 +24,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col d-flex justify-content-center">
-                                <!-- <ul class="list-group list-group-flush" id="list1"> -->
-                                <!-- <li class="list-group-item" id="les">Les</li>
-                                    <li class="list-group-item" id="cipka">Čipka</li>
-                                    <li class="list-group-item" id="blago">Blago</li> -->
-                                <!-- </ul> -->
+                              
                                 <div class="list-group">
                                     <a href="#" class="list-group-item list-group-item-action"
                                         onclick="verify(0)">les</a>
@@ -40,12 +36,7 @@
 
                             </div>
                             <div class="col d-flex justify-content-center">
-                                <!-- <ul class="list-group list-group-flush" id="list2">
-                                    <li class="list-group-item" id="jeklo">Jeklo</li>
-                                    <li class="list-group-item" id="kamen">Kamen</li>
-                                    <li class="list-group-item" id="pletenina">Pletenina</li>
-                                </ul> -->
-
+                                
                                 <div class="list-group">
                                     <a href="#" class="list-group-item list-group-item-action"
                                         onclick="verify(3)">jeklo</a>
@@ -69,7 +60,7 @@
             //pobarva pravilne odgovore 
             let count = 0;
             function verify(elementnumber) {
-                if (elementnumber == 1 || elementnumber == 5) {
+                if (elementnumber == 0 || elementnumber == 1) {
                     let ele=document.getElementsByClassName('list-group-item')[elementnumber];
                     ele.classList.add('list-group-item-success');
                     count++;
