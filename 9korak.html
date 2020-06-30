@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        #hidden-btn{
+            margin-top: 5%;
+            text-align: center;
+            background-color: lightgray;
+            padding: 3%;
+        }
+    </style>
 </head>
 
 <body>
@@ -17,13 +26,12 @@
             <div class="content mx-auto card justify-content-md-center">
                 <div class="card">
                     <div class="card-header">
-                       <h2> Spodaj izmed vseh pojmov izberi tista 2, ki skupaj tvorita pravilno kombinacijo materialov
+                       <h2>Izberi pravilno kombinacijo materialov<br>
                         uporabljenih pri delu Prt.</h2>
                     </div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col d-flex justify-content-center">
-
                                 <div class="list-group">
                                     <a href="#" class="list-group-item list-group-item-action"
                                         onclick="verify(0)">ravnovesje</a>
@@ -31,12 +39,6 @@
                                         onclick="verify(1)">čipke</a>
                                     <a href="#" class="list-group-item list-group-item-action"
                                         onclick="verify(2)">tradicija</a>
-                                </div>
-
-                            </div>
-                            <div class="col d-flex justify-content-center">
-
-                                <div class="list-group">
                                     <a href="#" class="list-group-item list-group-item-action"
                                         onclick="verify(3)">stol</a>
                                     <a href="#" class="list-group-item list-group-item-action"
@@ -44,18 +46,18 @@
                                     <a href="#" class="list-group-item list-group-item-action"
                                         onclick="verify(5)">delo s kovino </a>
                                 </div>
-                            </div>
-
-
-                            <button type="button" class="gumb odmik btn btn-block btn-secondary"
-                             style="display:none;" id="hidden-btn"><a href="11korak.html">Nadaljuj</a></button>
+                                
                         </div>
+                        
+                        <button type="button" class="gumb odmik btn btn-block btn-secondary"
+                        style="display:none;" id="hidden-btn"><a href="11korak.html">Nadaljuj</a></button>
 
                     </div>
                 </div>
             </div>
         </div>
         <script>
+
             //je prav stud ko nista obe poklikane ampak 1 2x
             //pobarva pravilne odgovore 
             let count = 0;

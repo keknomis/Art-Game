@@ -55,10 +55,7 @@
             transition: transform 1s;
         }
 
-        .card.is-flipped {
-            transform: translateX(-100%) rotateY(-180deg);
-        }
-
+ 
         .card__face {
             position: absolute;
             width: 100%;
@@ -76,11 +73,6 @@
             background: ghostwhite;
         }
 
-        .card__face--back {
-            background: ghostwhite;
-            transform: rotateY(180deg);
-            color: black;
-        }
 
         .center {
             display: block;
@@ -99,18 +91,15 @@
             color: #c7b033;
         }
 
-        .question {
-            padding-top: 25%;
-        }
 
         #hidden-btn {
             margin-top: 5%;
+            background-color: white;
+            padding: 3%;
         }
 
-        .question-mark {
-            color: #c7b033;
-            font-size: 100px;
-            display: block;
+        #hidden-list{
+            text-align: center;
         }
 
 
@@ -137,7 +126,7 @@
                         </div>
 
                         <button id="hidden-btn" type="button" type="button" style="display: none;"
-                        class="btn btn btn-block btn-outline-primary text-center">
+                        class="btn btn btn-block btn-outline-dark text-center">
                         <a href="8korak.html">Nadaljuj</a></button>
 
                     </div>
